@@ -12,6 +12,12 @@
 		2DE6CB8C24013CB600C99E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6CB8B24013CB600C99E1F /* Assets.xcassets */; };
 		2DE6CB9224013CB600C99E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6CB9024013CB600C99E1F /* LaunchScreen.storyboard */; };
 		2DE6CB9D24013CB600C99E1F /* GridLayoutExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6CB9C24013CB600C99E1F /* GridLayoutExampleTests.swift */; };
+		2DE6CBAE2401422000C99E1F /* CategoriesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6CBA82401422000C99E1F /* CategoriesInteractorTests.swift */; };
+		2DE6CBAF2401422000C99E1F /* CategoriesSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6CBA92401422000C99E1F /* CategoriesSnapshotTests.swift */; };
+		2DE6CBB12401422000C99E1F /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6CBAB2401422000C99E1F /* CategoriesViewController.swift */; };
+		2DE6CBB22401422000C99E1F /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6CBAC2401422000C99E1F /* CategoriesInteractor.swift */; };
+		2DE6CBB32401422000C99E1F /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6CBAD2401422000C99E1F /* CategoriesView.swift */; };
+		2DE6CBB52401438F00C99E1F /* GridLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6CBB42401438F00C99E1F /* GridLayoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,12 @@
 		2DE6CB9824013CB600C99E1F /* GridLayoutExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridLayoutExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE6CB9C24013CB600C99E1F /* GridLayoutExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutExampleTests.swift; sourceTree = "<group>"; };
 		2DE6CB9E24013CB600C99E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DE6CBA82401422000C99E1F /* CategoriesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractorTests.swift; sourceTree = "<group>"; };
+		2DE6CBA92401422000C99E1F /* CategoriesSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSnapshotTests.swift; sourceTree = "<group>"; };
+		2DE6CBAB2401422000C99E1F /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		2DE6CBAC2401422000C99E1F /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
+		2DE6CBAD2401422000C99E1F /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		2DE6CBB42401438F00C99E1F /* GridLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 			children = (
 				2DE6CB7724013C8500C99E1F /* GridLayout.h */,
 				2DE6CB7824013C8500C99E1F /* Info.plist */,
+				2DE6CBB42401438F00C99E1F /* GridLayoutView.swift */,
 			);
 			path = GridLayout;
 			sourceTree = "<group>";
@@ -102,6 +115,7 @@
 		2DE6CB8424013CB400C99E1F /* GridLayoutExample */ = {
 			isa = PBXGroup;
 			children = (
+				2DE6CBA72401403000C99E1F /* Categories */,
 				2DE6CB8524013CB400C99E1F /* AppDelegate.swift */,
 				2DE6CB8B24013CB600C99E1F /* Assets.xcassets */,
 				2DE6CB9024013CB600C99E1F /* LaunchScreen.storyboard */,
@@ -117,6 +131,18 @@
 				2DE6CB9E24013CB600C99E1F /* Info.plist */,
 			);
 			path = GridLayoutExampleTests;
+			sourceTree = "<group>";
+		};
+		2DE6CBA72401403000C99E1F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2DE6CBA82401422000C99E1F /* CategoriesInteractorTests.swift */,
+				2DE6CBA92401422000C99E1F /* CategoriesSnapshotTests.swift */,
+				2DE6CBAB2401422000C99E1F /* CategoriesViewController.swift */,
+				2DE6CBAC2401422000C99E1F /* CategoriesInteractor.swift */,
+				2DE6CBAD2401422000C99E1F /* CategoriesView.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +225,7 @@
 				TargetAttributes = {
 					2DE6CB7324013C8500C99E1F = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					2DE6CB8224013CB400C99E1F = {
 						CreatedOnToolsVersion = 11.4;
@@ -260,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE6CBB52401438F00C99E1F /* GridLayoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE6CBB22401422000C99E1F /* CategoriesInteractor.swift in Sources */,
+				2DE6CBB32401422000C99E1F /* CategoriesView.swift in Sources */,
+				2DE6CBAF2401422000C99E1F /* CategoriesSnapshotTests.swift in Sources */,
+				2DE6CBAE2401422000C99E1F /* CategoriesInteractorTests.swift in Sources */,
 				2DE6CB8624013CB400C99E1F /* AppDelegate.swift in Sources */,
+				2DE6CBB12401422000C99E1F /* CategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +462,7 @@
 		2DE6CB7D24013C8500C99E1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GX6ZJG76MC;
@@ -446,6 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.damian.kolasinski.GridLayout;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,6 +489,7 @@
 		2DE6CB7E24013C8500C99E1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GX6ZJG76MC;
