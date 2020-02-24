@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import UI
 import GridLayout
 
 struct CategoriesViewModel {
-
+    let gridViewModel: GridLayoutViewModel
 }
 
 final class CategoriesView: UIView {
+    private let gridView: GridLayoutView
     
     init(frame: CGRect, viewModel: CategoriesViewModel) {
+        self.gridView = GridLayoutView(viewModel: viewModel.gridViewModel)
         super.init(frame: frame)
         applyStyling()
         setupSubviews()
@@ -27,7 +30,7 @@ final class CategoriesView: UIView {
     required init?(coder aDecoder: NSCoder) { fatalError("Storyboards are not compatible with true love and beauty") }
     
     private func applyStyling() {
-        backgroundColor = .blue
+        backgroundColor = .white
     }
     
     private func setupInteractions() {
@@ -41,17 +44,13 @@ final class CategoriesView: UIView {
 
 extension CategoriesView {
     private func setupSubviews() {
-        let gridView = GridLayoutView(frame: CGRect(
-            origin: CGPoint(x: 37.5, y: 64),
-            size: CGSize(width: 300, height: 400)
-        ))
         gridView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(gridView)
-        NSLayoutConstraint.activate([
-            gridView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            gridView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            gridView.widthAnchor.constraint(equalToConstant: 150),
-            gridView.heightAnchor.constraint(equalToConstant: 200)
-        ])
+        NSLayoutConstraint.activate(
+            gridView.centerXAnchor == centerXAnchor,
+            gridView.centerYAnchor == centerYAnchor,
+            gridView.widthAnchor == 150,
+            gridView.heightAnchor == 200
+        )
     }
 }
